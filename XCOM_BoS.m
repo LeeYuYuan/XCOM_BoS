@@ -101,7 +101,7 @@ LLCAL_data = reshape(LLCAL_data, [3, time])/ 1000;
 count = 0;
 %distance = zeros(time);
 
-while count <= time-1  
+while count <= ICl2  
     
     
     count = count +1;
@@ -183,14 +183,14 @@ while count <= time-1
     
 
     
-    %for i = count
-        %F(i) = getframe(figure(1));
-    %end
+    for i = count
+        F(i) = getframe(figure(1));
+    end
     
 end
 
 distance = distance(ICr1+2:end);
-%video = VideoWriter('test.avi', 'Uncompressed AVI');
-%open(video)
-%writeVideo(video, F);
-%close(video)
+video = VideoWriter('test.avi', 'Uncompressed AVI');
+open(video)
+writeVideo(video, F);
+close(video)
