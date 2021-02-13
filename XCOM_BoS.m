@@ -183,14 +183,14 @@ while count <= ICl2
     
 
     
-    for i = count
-        F(i) = getframe(figure(1));
-    end
+    %for i = count
+    %    F(i) = getframe(figure(1));
+    %end
     
 end
 
-distance = distance(ICr1+2:end);
-video = VideoWriter('test.avi', 'Uncompressed AVI');
-open(video)
-writeVideo(video, F);
-close(video)
+distance = distance(ICr1+2:end) * 10; %unit is centermeter
+%video = VideoWriter('test.avi', 'Uncompressed AVI');
+%open(video)
+%writeVideo(video, F);
+%close(video)
